@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "767aca450ea29950ed508ed063aa0d99",
+    "revision": "46bd1e55361c9c306ee99d59d3d47aea",
     "url": "/AVAT/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AVAT/static/css/2.0d2fdb4f.chunk.css"
   },
   {
-    "revision": "5a7146de282d4c45aaaf",
+    "revision": "495f6d3afabe03baa0df",
     "url": "/AVAT/static/css/main.d1b05096.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AVAT/static/js/2.f491965b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5a7146de282d4c45aaaf",
-    "url": "/AVAT/static/js/main.8a60a6e8.chunk.js"
+    "revision": "495f6d3afabe03baa0df",
+    "url": "/AVAT/static/js/main.3a83a980.chunk.js"
   },
   {
     "revision": "bd8da39e37d13980d2ad",
