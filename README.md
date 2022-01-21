@@ -18,21 +18,6 @@ The below listed browsers should be compatible. If any errors persist please use
 * Safari 10 (release: 9/20/2016)
 * Edge 14 (release: 2/18/2016)
 
-## Backend Structure:
-
-This is a breif overview with the goals and strucutre that the project was designed around. For more detailed information please look into the respective file's documentation for implementation details. There are many files but the most important ones are outlined below. 
-
-### React Components:
-
-The project is designed in such a way that if any new features are needed to be added they can be made into react-compomnents. Currently, there are 3 main components that being ```main_youtube```, ```main_upload``` and ```change_table```. As more features and needs arise, this should be updated to reflect that.
-
-These files are stored under the ```src/ui_elements``` folder.
-
-### Fabric.js Components:
-
-Similar to how the react components are structured, each of the types of annotations are split up into their own respective file. Under the ```backend_processing``` folder there should be ```bounding_box.js```, ```key_point.js``` and ```segmentation.js``` which represent the respective annotation types. To add more types simply add a file to the folder and follow the similar format to what's on there to add it into the main project. 
-
-
 ## Local Deployment (Frontend)
 
 These instructions will get you a copy of the project up and running on your local machine for viewing. 
@@ -61,7 +46,7 @@ npm start
 
 If the goal is to simply access the website, then go to the ```build``` folder to ```index.html``` to access the website. 
 
-## Docker
+## Docker setup
 
 Currently docker is setup to run the the node project. This will be further expanded onto in the future to include Clowder integration, backend servers, etc
 
@@ -74,6 +59,33 @@ Easy command list:
 ```sudo docker stop avat && sudo docker rm avat```
 - To remove pre-existing container and build new container
 ```sudo docker stop avat && sudo docker rm avat && sudo docker build --tag avat:latest . && sudo docker run -it --rm -v ${PWD}:/avat -v /AVAT/node_modules -e CHOKIDAR_USEPOLLING=true --name avat -p 3001:3000 avat && sudo docker start avat && sudo docker ps -a | grep avat```
+
+## Flask server
+
+There is also support for running this off of a flask server. This will be further expanded on into the future to include any external models and such. 
+
+*These commands are written for a UNIX based machine running Docker. Support for windows is uncertain*
+
+Setup a virtual environment and install the proper dependencies from ```backend/requirements.txt```. Then change current directory to ```backend``` and type in ```flask run```. The website should be up on ```http://127.0.0.1:5000```
+
+## Code Structure:
+
+This is a breif overview with the goals and strucutre that the project was designed around. For more detailed information please look into the respective file's documentation for implementation details. There are many files but the most important ones are outlined below. 
+
+### React Components:
+
+The project is designed in such a way that if any new features are needed to be added they can be made into react-compomnents. Currently, there are 4 main components that being ```main_upload```, ```change_table```, ```main_multiview``` and ```nav_bar```. As more features and needs arise, this should be updated to reflect that.
+
+These files are stored under the ```src/ui_elements``` folder.
+
+A rough outline of how all of the components link together is below:
+<img src="https://github.com/AIFARMS/AVAT/blob/dev/public/assets/AVAT%20Design%20Structure.png"/>
+
+### Annotation Components:
+
+Similar to how the react components are structured, each of the types of annotations are split up into their own respective file. Under the ```backend_processing``` folder there should be ```bounding_box.js```, ```key_point.js``` and ```segmentation.js``` which represent the respective annotation types. To add more types simply add a file to the folder and follow the similar format to what's on there to add it into the main project. 
+
+Any of the visual annotation types must have a fabric.js component attached to them since that is the only way to visually add them to the canvas.
 
 ## Built With
 

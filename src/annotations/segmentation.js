@@ -228,8 +228,8 @@ class Segmentation {
                 })
                 grouppo.lockMovementY = true;
                 grouppo.lockMovementX = true;
-                grouppo.selectable = false;
                 grouppo['local_id'] = id
+                console.log(grouppo)
 
                 canvas.add(grouppo)
                 //canvas.setActiveObject(grouppo)

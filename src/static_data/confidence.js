@@ -13,6 +13,6 @@ const confidence = [{
   },{
     value: 'Critical occlusion',
     label: 'Critical occlusion'
-  },
+  }
 ]
 export {confidence};
